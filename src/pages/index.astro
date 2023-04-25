@@ -1,0 +1,213 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Sep from "../components/Sep.astro";
+import Features from "../components/Features.astro";
+import Contact from "../components/Contact.astro";
+import Devider from "../components/Devider.astro";
+import Gallary from "../components/Gallary.astro";
+---
+
+<Layout title="אילנית קיצוני">
+  <main class="relative">
+    <!-- HEADER -->
+    <section
+      class="relative bg-[url(backgroundfliped.png)] bg-cover bg-center bg-no-repeat"
+    >
+      <div
+        class="absolute inset-0 bg-white/70 sm:bg-transparent sm:from-white/80 sm:to-white/25 rtl:sm:bg-gradient-to-l"
+      >
+      </div>
+
+      <div
+        class="relative mx-auto max-w-screen-xl px-4 py-32 sm:px-6 lg:flex lg:h-screen lg:items-center lg:px-8"
+      >
+        <div class="max-w-xl text-center rtl:sm:text-right">
+          <h1
+            class="font-heebo text-3xl font-extrabold sm:text-5xl xl:text-7xl"
+          >
+            צלמו רגעים של
+
+            <strong class="block font-extrabold text-rose-700">שמחה</strong>
+          </h1>
+
+          <p class="sm:text-xl/relaxed mt-4 max-w-lg"></p>
+
+          <div class="mt-8 flex flex-wrap gap-4 text-center">
+            <a
+              href="#contact"
+              class="block w-full rounded bg-rose-600 px-12 py-3 text-sm font-medium text-white shadow hover:bg-rose-700 focus:outline-none focus:ring active:bg-rose-500 sm:w-auto"
+            >
+              צרו קשר
+            </a>
+
+            <a
+              href="#gallary"
+              class="block w-full rounded bg-white px-12 py-3 text-sm font-medium text-rose-600 shadow hover:text-rose-700 focus:outline-none focus:ring active:text-rose-500 sm:w-auto"
+            >
+              ראה דוגמאות
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--  -->
+
+    <!-- ABOUT -->
+    <section class="w-full scroll-m-16 bg-home py-7 text-center" id="about">
+      <div
+        class="mx-auto flex w-full max-w-screen-xl flex-grow flex-col items-stretch justify-center gap-5 px-3 text-center md:flex-1 md:flex-row md:px-10"
+      >
+        <div class="order-1 w-full md:order-3 lg:w-7/12">
+          <img src="/us.jpg" alt="" class="object-cover md:aspect-square" />
+        </div>
+        <div class="order-2 w-full">
+          <h1 class="font-varela text-4xl font-bold xl:text-5xl">קצת עליי</h1>
+          <Sep />
+
+          <p
+            class="mx-auto max-w-5xl text-base sm:text-lg md:text-xl xl:text-2xl"
+          >
+            תמיד אהבתי לצלם, מאז ומעולם. הייתי זו שרצה עם המצלמה אחרי כולם, בכל
+            נסיעה, אירוע, חוויה וסיטואציה, תופסת את הדקויות, הרגעים הקטנים שאף
+            אחד לא שם אליהם לב, אך המרגשים ביותר, המזכרות שלאחר מכן, כשרואים
+            ומתרגשים מחדש. זו אני שתיעדתי, כזו אני.
+            <br />
+            קוראת ומרגישה את המצולמים שלי, את רגעי השמחה והאושר, הצחוק, החיבוקים,
+            המבטים ורגעי אהבה, חיבורים בין אנשים שיודעת ואוהבת לתעד רגעים משמעותיים
+            ולא במילים.
+            <br />
+            מתרגשת איתם כל פעם מחדש, לקוחות שהופכים לחברים קרובים.
+          </p>
+          <button
+            data-ripple-light="true"
+            class="order-4 mx-auto block rounded-md bg-primary px-5 py-3 tracking-wider text-text_color transition-all hover:scale-105"
+          >
+            קבע שיחת הכירות
+          </button>
+        </div>
+      </div>
+    </section>
+    <!--  -->
+
+    <Devider />
+
+    <!-- SERVICES -->
+    <Features />
+    <!--  -->
+
+    <Devider />
+
+    <section id="gallary" class="scroll-m-20 space-y-10 py-3">
+      <h1 class="font-heebo text-7xl font-bold">גלריה</h1>
+      <Gallary />
+      <h2 class="font-heebo text-4xl font-black">
+        וזה רק
+        <span class="text-rose-700">טעימה</span>
+
+        מהרגעים שאספתי...
+      </h2>
+    </section>
+
+    <Devider />
+
+    <Contact />
+  </main>
+</Layout>
+<!-- step form -->
+<script is:inline>
+  var currentTab = 0; // Current tab is set to be the first tab (0)
+  showTab(currentTab); // Display the current tab
+
+  function showTab(n) {
+    // This function will display the specified tab of the form ...
+    var x = document.getElementsByClassName("tab");
+    x[n].style.display = "block";
+    // ... and fix the Previous/Next buttons:
+    if (n == 0) {
+      document.getElementById("prevBtn").style.display = "none";
+    } else {
+      document.getElementById("prevBtn").style.display = "inline";
+    }
+    if (n == x.length - 1) {
+      document.getElementById("nextBtn").innerHTML = "שלח";
+    } else {
+      document.getElementById("nextBtn").innerHTML = "הבא";
+    }
+  }
+
+  function nextPrev(n) {
+    // This function will figure out which tab to display
+    var x = document.getElementsByClassName("tab");
+    // Exit the function if any field in the current tab is invalid:
+    if (n == 1 && !validateForm()) return false;
+    // Hide the current tab:
+    x[currentTab].style.display = "none";
+    // Increase or decrease the current tab by 1:
+    currentTab = currentTab + n;
+    // if you have reached the end of the form... :
+    if (currentTab >= x.length) {
+      //...the form gets submitted:
+      document.getElementById("regForm").submit();
+      return false;
+    }
+    var progressbar = document.getElementById("progress");
+    progressbar.style.display = "block";
+    progressbar.children[0].style.width =
+      ((currentTab / x.length) * 100).toString() + "%";
+    // Otherwise, display the correct tab:
+    showTab(currentTab);
+  }
+
+  function validateForm() {
+    // This function deals with validation of the form fields
+    var x,
+      y,
+      i,
+      valid = true;
+    x = document.getElementsByClassName("tab");
+    y = x[currentTab].getElementsByTagName("input");
+    if (y.length == 0) {
+      y = x[currentTab].getElementsByTagName("select");
+    }
+    // A loop that checks every input field in the current tab:
+    for (i = 0; i < y.length; i++) {
+      // If a field is empty...
+      console.log(!y[i].checked);
+      if (
+        (y[i].value == "" ||
+          (!y[i].checked && y[i].type == "checkbox") ||
+          (y[i].name == "טלפון" && !/^\d+$/.test(y[i].value))) &&
+        y[i].required == true
+      ) {
+        // add an "invalid" class to the field:
+        y[i].className += " border-red-600";
+        // and set the current valid status to false:
+        valid = false;
+      }
+    }
+
+    return valid; // return the valid status
+  }
+</script>
+<!-- showonfade -->
+<script>
+  const callback = function (entries: IntersectionObserverEntry[]) {
+    entries.forEach((entry: IntersectionObserverEntry) => {
+      console.log(entry);
+
+      if (entry.isIntersecting) {
+        entry.target.classList.add("animate-fadeIn");
+        observer.unobserve(entry.target);
+      } else {
+        entry.target.classList.remove("animate-fadeIn");
+      }
+    });
+  };
+  const observer = new IntersectionObserver(callback);
+
+  const targets = document.querySelectorAll(".js-show-on-scroll");
+  targets.forEach(function (target) {
+    target.classList.add("opacity-0");
+    observer.observe(target);
+  });
+</script>
