@@ -20,7 +20,7 @@ import Footer from "../components/Footer.astro";
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;700;900&family=Open+Sans&family=Varela+Round&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;700;900&family=Open+Sans:wght@300;400;500;600;700;800&family=Varela+Round&display=swap"
       rel="stylesheet"
     />
     <!-- Flowbite -->
@@ -33,6 +33,17 @@ import Footer from "../components/Footer.astro";
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
+
+    <!-- animate.css -->
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    /> -->
+    <!--  -->
+
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!--  -->
 
     <title>{title}</title>
   </head>
@@ -63,5 +74,11 @@ import Footer from "../components/Footer.astro";
     <script
       src="https://unpkg.com/@material-tailwind/html@latest/scripts/ripple.js"
     ></script>
+
+    <!-- AOS -->
+    <script is:inline src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script is:inline>
+      AOS.init({ duration: 1000, once: false });
+    </script>
   </body>
 </html>

@@ -123,9 +123,10 @@ const services = [
       {
         services.map((service) => (
         <div
-        class="wow fadeInUp w-full max-w-full flex-shrink px-4 sm:w-1/2 lg:w-1/3 lg:px-6"
-        data-wow-duration="1s"
-        data-wow-delay=".3s"
+        class="  w-full max-w-full flex-shrink px-4 sm:w-1/2 lg:w-1/3 lg:px-6"
+        data-aos="fade-up"
+        data-aos-duration="1s"
+        data-aos-delay=".3s"
         style="visibility: visible; animation-duration: 1s; animation-delay: 0.3s; animation-name: fadeInUp;"
       >
         <!-- service block -->
@@ -136,7 +137,7 @@ const services = [
             <!-- icon -->
             <i class={`fa-solid fa-${service.icon}`}></i>
           </div>
-          <h3 class="mb-2 text-lg font-semibold leading-normal text-black">
+          <h3 class="mb-2 text-lg font-semibold font-heebo leading-normal text-black">
             {service.title}
           </h3>
           <p class="text-gray-500">
