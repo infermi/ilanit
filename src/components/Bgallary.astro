@@ -4,7 +4,7 @@ const GALLARYPATH = "/ilanit/bgallary/";
 const GALLAYIMAGES = Array.from({ length: 8 }, (_, i) => i + 1);
 ---
 
-<div class="-z-10 mb-20 grid grid-cols-2 gap-4 md:grid-cols-4" id="gallery">
+<div class="-z-10 grid grid-cols-2 gap-4 md:grid-cols-4" id="gallery">
   <div class="grid gap-4">
     {
       GALLAYIMAGES.slice(0, GALLAYIMAGES.length / 4).map((image) => (

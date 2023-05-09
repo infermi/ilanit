@@ -120,12 +120,13 @@ import Gallary from "../components/Gallary.astro";
             <br />
             מתרגשת איתם כל פעם מחדש, לקוחות שהופכים לחברים קרובים.
           </p>
-          <button
+          <a
             data-ripple-light="true"
-            class="order-4 mx-auto block rounded-md bg-primary px-5 py-3 tracking-wider text-text_color transition-all hover:scale-105"
+            href="/ilanit/contact"
+            class="order-4 mx-auto block w-fit rounded-md bg-primary px-5 py-3 tracking-wider text-text_color transition-all hover:scale-105"
           >
             קבע שיחת הכירות
-          </button>
+          </a>
         </div>
       </div>
     </section>
@@ -152,8 +153,15 @@ import Gallary from "../components/Gallary.astro";
     </section>
     <!--  -->
 
-    <Devider />
-
-    <Contact />
+    <div class="w-full bg-primary px-4 py-10 text-center">
+      <h1 class="font-heebo text-5xl font-bold text-white lg:text-7xl">
+        תעדו את הרגעים החשובים עם צילום מהלב
+      </h1>
+      <a
+        href="/ilanit/contact"
+        class="mx-auto mt-10 block w-fit rounded-md bg-white px-6 py-3 text-sm font-medium text-rose-500 transition-all hover:scale-105 lg:mt-20 lg:text-base"
+        >צרו קשר</a
+      >
+    </div>
   </main>
 </Layout>
