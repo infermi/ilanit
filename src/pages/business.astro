@@ -1,0 +1,83 @@
+---
+import Devider from "../components/Devider.astro";
+import Layout from "../layouts/Layout.astro";
+//@ts-ignore
+import Bgallary from "../components/Bgallary.astro";
+---
+
+<Layout title="צילום עסקי">
+  <!-- HEADER -->
+  <section class="mb-40">
+    <div
+      class="relative overflow-hidden bg-cover bg-no-repeat"
+      style="
+            background-position: 50%;
+            background-image: url('https://images.unsplash.com/photo-1542435503-956c469947f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80&ar=16:9');
+            height: 500px;
+          "
+    >
+      <div
+        class="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-fixed"
+        style="background-color: rgba(0, 0, 0, 0.40)"
+      >
+        <div class="flex h-full items-center justify-center">
+          <div class="px-6 text-center text-white md:px-12">
+            <h1
+              class="mb-12 text-5xl font-bold tracking-tight md:text-6xl xl:text-7xl"
+            >
+              צילום לארועים עסקיים
+            </h1>
+            <button
+              type="button"
+              class="inline-block rounded border-2 border-white px-7 py-3 text-sm font-medium uppercase leading-snug text-white transition duration-150 ease-in-out hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0"
+              data-mdb-ripple="true"
+              data-mdb-ripple-color="light"
+            >
+              צור קשר
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Devider />
+
+  <section
+    id="business"
+    class="scroll-m-20 bg-gray-50 sm:grid sm:grid-cols-2 sm:items-center"
+  >
+    <div class="p-8 md:p-12 lg:px-16 lg:py-24">
+      <div class="mx-auto max-w-2xl text-center sm:text-right">
+        <h2 class="font-varela text-2xl font-bold text-gray-900 md:text-3xl">
+          צילום אירועים עסקיים
+        </h2>
+
+        <p class="text-gray-500 md:mt-4 xl:text-lg">
+          אני מציעה שירותי צילום אירועים עסקיים ברמה מקצועית ואיכותית. אני מתמחה
+          בתחום ומאפשרת תיעוד מדוייק ומרגש של האירוע העסקי שלכם. אני מתאימה את
+          הצילום לפי המטרות המבוקשות ומספקת תמונות מקצועיות ואיכותיות.
+          <br />
+          צרו קשר לצילום האירוע העסקי שלכם עם צילום מהלב
+        </p>
+
+        <button
+          data-ripple-light="true"
+          class="mx-auto mt-4 block rounded-md bg-primary px-5 py-3 tracking-wider text-text_color transition-all hover:scale-105 md:mt-8 lg:mr-0"
+        >
+          תעד את האירוע העסקי שלך
+        </button>
+      </div>
+    </div>
+
+    <img
+      alt=""
+      src="/ilanit/business.jpg"
+      class="h-full w-full object-cover sm:h-[calc(100%_-_2rem)] sm:self-end ltr:sm:rounded-tl-[30px] rtl:sm:rounded-tr-[30px] md:h-[calc(100%_-_4rem)] ltr:md:rounded-tl-[60px] rtl:md:rounded-tr-[60px]"
+    />
+  </section>
+
+  <Devider />
+
+  <section><Bgallary /></section>
+</Layout>
