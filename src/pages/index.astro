@@ -6,6 +6,7 @@ import Contact from "../components/Contact.astro";
 import Devider from "../components/Devider.astro";
 //@ts-ignore
 import Gallary from "../components/Gallary.astro";
+import Testimonials from "../components/Testimonials.astro";
 ---
 
 <Layout title="אילנית קיצוני">
@@ -139,7 +140,14 @@ import Gallary from "../components/Gallary.astro";
     <!--  -->
 
     <Devider />
+    <section>
+      <h1 class="font-heebo text-5xl font-bold">
+        לקוחות <span class="text-rose-600">מרוצים</span>
+      </h1>
+    </section>
+    <Testimonials />
 
+    <Devider />
     <!-- GALLARY -->
     <section id="gallary" class="scroll-m-20 space-y-10 py-3">
       <h1 class="font-heebo text-7xl font-bold">גלריה</h1>
