@@ -1,5 +1,5 @@
 ---
-const GALLARYPATH = "/ilanit/bgallary/";
+const galleryPATH = "/ilanit/bgallery/";
 
 const GALLAYIMAGES = Array.from({ length: 8 }, (_, i) => i + 1);
 ---
@@ -10,7 +10,7 @@ const GALLAYIMAGES = Array.from({ length: 8 }, (_, i) => i + 1);
       GALLAYIMAGES.slice(0, GALLAYIMAGES.length / 4).map((image) => (
         <div class="">
           <img
-            src={GALLARYPATH + image + ".jpg"}
+            src={galleryPATH + image + ".jpg"}
             data-aos="fade-up"
             loading="lazy"
             alt=""
@@ -26,7 +26,7 @@ const GALLAYIMAGES = Array.from({ length: 8 }, (_, i) => i + 1);
         (image) => (
           <div class="">
             <img
-              src={GALLARYPATH + image + ".jpg"}
+              src={galleryPATH + image + ".jpg"}
               data-aos="fade-up"
               loading="lazy"
               alt=""
@@ -45,7 +45,7 @@ const GALLAYIMAGES = Array.from({ length: 8 }, (_, i) => i + 1);
       ).map((image) => (
         <div class="">
           <img
-            src={GALLARYPATH + image + ".jpg"}
+            src={galleryPATH + image + ".jpg"}
             alt=""
             loading="lazy"
             data-aos="fade-up"
@@ -63,7 +63,7 @@ const GALLAYIMAGES = Array.from({ length: 8 }, (_, i) => i + 1);
       ).map((image) => (
         <div class="">
           <img
-            src={GALLARYPATH + image + ".jpg"}
+            src={galleryPATH + image + ".jpg"}
             alt=""
             loading="lazy"
             data-aos="fade-up"
