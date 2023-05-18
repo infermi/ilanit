@@ -1,16 +1,16 @@
 ---
-const galleryPATH = "/";
+const GALLERYPATH = "/b";
 
-const GALLAYIMAGES = Array.from({ length: 8 }, (_, i) => i + 1);
+const GALLERYIMAGES = Array.from({ length: 8 }, (_, i) => i + 1);
 ---
 
 <div class="-z-10 grid grid-cols-2 gap-4 md:grid-cols-4" id="gallery">
   <div class="grid gap-4">
     {
-      GALLAYIMAGES.slice(0, GALLAYIMAGES.length / 4).map((image) => (
+      GALLERYIMAGES.slice(0, GALLERYIMAGES.length / 4).map((image) => (
         <div class="">
           <img
-            src={galleryPATH + image + ".jpg"}
+            src={GALLERYPATH + image + ".jpg"}
             data-aos="fade-up"
             loading="lazy"
             alt=""
@@ -22,30 +22,31 @@ const GALLAYIMAGES = Array.from({ length: 8 }, (_, i) => i + 1);
   </div>
   <div class="grid gap-4">
     {
-      GALLAYIMAGES.slice(GALLAYIMAGES.length / 4, GALLAYIMAGES.length / 2).map(
-        (image) => (
-          <div class="">
-            <img
-              src={galleryPATH + image + ".jpg"}
-              data-aos="fade-up"
-              loading="lazy"
-              alt=""
-              class=" h-auto max-w-full rounded-lg transition-all duration-300 ease-out hover:brightness-90"
-            />
-          </div>
-        )
-      )
+      GALLERYIMAGES.slice(
+        GALLERYIMAGES.length / 4,
+        GALLERYIMAGES.length / 2
+      ).map((image) => (
+        <div class="">
+          <img
+            src={GALLERYPATH + image + ".jpg"}
+            data-aos="fade-up"
+            loading="lazy"
+            alt=""
+            class=" h-auto max-w-full rounded-lg transition-all duration-300 ease-out hover:brightness-90"
+          />
+        </div>
+      ))
     }
   </div>
   <div class="grid gap-4">
     {
-      GALLAYIMAGES.slice(
-        GALLAYIMAGES.length / 2,
-        (GALLAYIMAGES.length / 4) * 3
+      GALLERYIMAGES.slice(
+        GALLERYIMAGES.length / 2,
+        (GALLERYIMAGES.length / 4) * 3
       ).map((image) => (
         <div class="">
           <img
-            src={galleryPATH + image + ".jpg"}
+            src={GALLERYPATH + image + ".jpg"}
             alt=""
             loading="lazy"
             data-aos="fade-up"
@@ -57,13 +58,13 @@ const GALLAYIMAGES = Array.from({ length: 8 }, (_, i) => i + 1);
   </div>
   <div class="grid gap-4">
     {
-      GALLAYIMAGES.slice(
-        (GALLAYIMAGES.length / 4) * 3,
-        GALLAYIMAGES.length
+      GALLERYIMAGES.slice(
+        (GALLERYIMAGES.length / 4) * 3,
+        GALLERYIMAGES.length
       ).map((image) => (
         <div class="">
           <img
-            src={galleryPATH + image + ".jpg"}
+            src={GALLERYPATH + image + ".jpg"}
             alt=""
             loading="lazy"
             data-aos="fade-up"
